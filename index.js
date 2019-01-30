@@ -2,7 +2,17 @@
 
 (function(window, _) {
   window.pley = window.pley || {
-    numz: {/* other code */},
+    numz: {
+      
+        getDistance: function(pointA, pointB) {
+          const
+            distanceX = point.B.x - pointA.x;
+            distanceY = point.B.y - pointA.y;
+            return Math.sqrt(distanceX * distanceX  + distanceY * distanceY);
+          },
+      
+      
+    },
     phyz: {
       /**
        * Returns an Object with basic properties utilized in a 
