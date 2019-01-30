@@ -6,8 +6,8 @@
       
         getDistance: function(pointA, pointB) {
           const
-            distanceX = point.B.x - pointA.x;
-            distanceY = point.B.y - pointA.y;
+            distanceX = pointB.x - pointA.x;
+            distanceY = pointB.y - pointA.y;
             return Math.sqrt(distanceX * distanceX  + distanceY * distanceY);
           },
       
