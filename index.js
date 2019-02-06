@@ -3,15 +3,29 @@
 (function(window, _) {
   window.pley = window.pley || {
     numz: {
-      
-        getDistance: function(pointA, pointB) {
-          const
-            distanceX = pointB.x - pointA.x;
-            distanceY = pointB.y - pointA.y;
-            return Math.sqrt(distanceX * distanceX  + distanceY * distanceY);
-          },
-      
-      
+
+      getDistance: function(pointA, pointB) {
+        const
+          distanceX = pointB.x - pointA.x;
+        distanceY = pointB.y - pointA.y;
+        return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+      },
+      degreesToRadians(degrees) {
+        return degrees * Math.PI / 180;
+      },
+      radiansToDegrees(radians) {
+        return radians * 180 / Math.PI;
+      },
+      getAngleDegrees(pointA, pointB) {
+        const
+          distanceX = pointB.x - pointA.x,
+          distanceY = pointB.y - pointA.y,
+          radians = Math.atan2(distanceY, distanceX),
+          degrees = radians * 180 / Math.PI;
+        return degrees;
+      },
+
+
     },
     phyz: {
       /**
