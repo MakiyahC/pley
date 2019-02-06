@@ -6,17 +6,18 @@
 
       getDistance: function(pointA, pointB) {
         const
-          distanceX = pointB.x - pointA.x;
-        distanceY = pointB.y - pointA.y;
+          distanceX = pointB.x - pointA.x,
+          distanceY = pointB.y - pointA.y;
+        
         return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
       },
-      degreesToRadians(degrees) {
+      degreesToRadians: function(degrees) {
         return degrees * Math.PI / 180;
       },
-      radiansToDegrees(radians) {
+      radiansToDegrees: function(radians) {
         return radians * 180 / Math.PI;
       },
-      getAngleDegrees(pointA, pointB) {
+      getAngleDegrees: function(pointA, pointB) {
         const
           distanceX = pointB.x - pointA.x,
           distanceY = pointB.y - pointA.y,
