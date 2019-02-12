@@ -51,6 +51,23 @@
        * force of impact of a collision.
        * @return {Object} The body.
        */
+      updatePosition: function(body) {
+      body.x += body.velocityX;
+      body.y += body.velocityY;
+      body.rotation += body.rotationalVelocity;
+    },
+       
+       
+       
+       
+      updateVelocity: function(body, forceOnX, forceOnY) {
+      const
+        angle = body.rotation * Math.PI / 180,
+        accelerationOnX  = Math.cos(angle) * forceOnX,
+        accelerationOnY = Math.sin(angle) * forceOnY;
+      body.velocityX += accelerationOnX;
+      body.velocityY += accelerationOnY;
+    },
       makeBody: function(type, {
         velocityX = 0,
         velocityY = 0,
